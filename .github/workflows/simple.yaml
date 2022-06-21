@@ -8,8 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        run: eccccho "HOLA Marco en Github Actions"
+        run: echo "HOLA Marco en Github Actions"
       - name: multiline script
         run: |
           node -v
           npm -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python

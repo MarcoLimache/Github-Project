@@ -14,3 +14,5 @@ jobs:
           who-to-greet: Marco Limache
       - name: Log Greeting Time
         run: echo "${{ steps.greet.outputs.time }}"
+      - name: Checkout
+        uses: actions/checkout@v1
